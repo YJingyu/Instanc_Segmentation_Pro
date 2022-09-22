@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: mmdet
+Version: 2.14.0
+Summary: OpenMMLab Detection Toolbox and Benchmark
+Home-page: https://github.com/open-mmlab/mmdetection
+Author: OpenMMLab
+Author-email: openmmlab@gmail.com
+License: Apache License 2.0
+Description: # ACM MMSports'22 Instance Segmentation second challenge
+        
+        ## setup environments
+        sh pre.sh
+        
+        ## train model with multi-gpus
+        nohup bash tools/dist_train.sh configs/mmsports2022/exp02.py 4 >> /knt/lengyu.yb/logs/mmsports2022/exp07.log 2>&1 &
+        
+        ## swa model with multi-gpus
+        nohup bash tools/dist_train.sh configs/mmsports2022/exp02_swa.py 4 >> /knt/lengyu.yb/logs/mmsports2022/exp07_swa.log 2>&1 &
+        
+        ## inference
+        bash tools/dist_test.sh configs/mmsports2022/exp02.py /knt/lengyu.yb/logs/mmsports2022/exp07_swa/swa_model_148_mms.pth 4
+        
+        ## generate standard submission format
+        python scripts/gen_standard_submission.py
+Keywords: computer vision,object detection
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Provides-Extra: all
+Provides-Extra: tests
+Provides-Extra: build
+Provides-Extra: optional
