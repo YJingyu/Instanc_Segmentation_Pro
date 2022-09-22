@@ -8,15 +8,15 @@ The code is based on [mmdetection](https://github.com/open-mmlab/mmdetection) an
 sh pre.sh
 
 ## train model with multi-gpus
-nohup bash tools/dist_train.sh configs/mmsports2022/exp02.py 4 >> /knt/lengyu.yb/logs/mmsports2022/exp07.log 2>&1 &
+nohup bash tools/dist_train.sh configs/mmsports2022/exp02.py 4 >> /lengyu.yb/logs/mmsports2022/exp07.log 2>&1 &
 
 ## swa model with multi-gpus
-nohup bash tools/dist_train.sh configs/mmsports2022/exp02_swa.py 4 >> /knt/lengyu.yb/logs/mmsports2022/exp07_swa.log 2>&1 &
+nohup bash tools/dist_train.sh configs/mmsports2022/exp02_swa.py 4 >> /lengyu.yb/logs/mmsports2022/exp07_swa.log 2>&1 &
 
 Our training logs and config are shown in **weights** folder
 
 ## inference
-bash tools/dist_test.sh configs/mmsports2022/exp02.py /knt/lengyu.yb/logs/mmsports2022/exp07_swa/swa_model_148_mms.pth 4
+bash tools/dist_test.sh configs/mmsports2022/exp02.py /lengyu.yb/logs/mmsports2022/exp07_swa/swa_model_148_mms.pth 4
 
 ## generate standard submission format
 python scripts/gen_standard_submission.py
