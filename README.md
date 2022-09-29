@@ -1,4 +1,4 @@
-The code for ACM MMSports'22 Instance Segmentation challenge. The paper and technical report will be released soon.
+The code for ACM MMSports'22 Instance Segmentation challenge. The details are presented in our [technical report](https://arxiv.org/abs/2209.13899).
 
 The code is based on [mmdetection](https://github.com/open-mmlab/mmdetection) and [CBNetV2](https://github.com/VDIGPKU/CBNetV2).
 
